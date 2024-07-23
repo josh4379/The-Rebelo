@@ -3,27 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+    <title>The Rebelo Family from Madeira</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f8;
+        }
+        header {
+            position: relative;
+            height: 400px;
+            background-image: url('https://legacy.plumguide.com/uploads/5a96b28c-4f3e-4ee1-b5c4-c56e61343652.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3em;
+            text-align: center;
+            z-index: 1;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            color: rgb(106, 90, 205);
+        }
+        .image-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid rgb(106, 90, 205);
+            border-radius: 5px;
+        }
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(106, 90, 205, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(106, 90, 205);
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <h1>Test Page</h1>
-    <p>If you can see this, HTML is rendering correctly.</p>
-    <div id="js-test"></div>
+    <header>
+        <h1>The Rebelo Family from Madeira</h1>
+    </header>
 
-    <script>
-        document.getElementById('js-test').textContent = 'If you can see this, JavaScript is working.';
-        console.log('JavaScript executed');
-        
-        window.onerror = function(message, source, lineno, colno, error) {
-            console.error('Caught error:', message);
-            document.body.innerHTML += '<p style="color: red;">Error: ' + message + '</p>';
-        };
+    <main>
+        <section>
+            <h2>About the Rebelo Family</h2>
+            <p>The Rebelo family has deep roots in the beautiful island of Madeira. For generations, they have called this Portuguese paradise their home, embracing its rich culture and breathtaking landscapes.</p>
+        </section>
 
-        window.addEventListener('load', function() {
-            console.log('Page fully loaded');
-            document.body.style.backgroundColor = '#e0e0e0';
-            document.body.innerHTML += '<p style="color: green;">Page load event fired</p>';
-        });
-    </script>
+        <section>
+            <h2>The Beauty of Madeira</h2>
+            <p>Madeira, often referred to as the "Pearl of the Atlantic," is a stunning archipelago known for its lush landscapes, dramatic cliffs, and vibrant culture. The Rebelo family has been fortunate to call this slice of paradise their home.</p>
+            
+            <div class="image-container">
+                <img src="https://www.tomashavel.com/wp-content/uploads/2023/05/map-of-madeira-portugal.png" alt="Map of Madeira">
+            </div>
+
+            <p>Some of the most captivating features of Madeira include:</p>
+            <ul>
+                <li>Lush laurel forests, a UNESCO World Heritage site</li>
+                <li>Stunning coastlines with dramatic cliffs</li>
+                <li>The charming capital city of Funchal</li>
+                <li>Picturesque levada walks through the island's interior</li>
+                <li>Vibrant flower gardens and exotic fruits</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Rebelo Family Traditions</h2>
+            <p>The Rebelo family takes pride in maintaining Madeiran traditions, including:</p>
+            <ul>
+                <li>Participating in the Flower Festival</li>
+                <li>Enjoying local cuisine like espetada and bolo do caco</li>
+                <li>Celebrating the New Year with Madeira's famous fireworks</li>
+                <li>Exploring the island's many hiking trails</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Visit Madeira</h2>
+            <p>If you're inspired by the beauty of Madeira and would like to experience it yourself, consider planning a visit to this enchanting island. You'll discover why the Rebelo family and many others are proud to call Madeira their home.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Rebelo Family. All rights reserved.</p>
+    </footer>
 </body>
 </html>
