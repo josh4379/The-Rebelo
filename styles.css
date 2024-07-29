@@ -87,7 +87,7 @@ nav {
 }
 
 .hero {
-    background-image: url('madeira1.jpg');  /* Updated image filename */
+    background-image: url('Images/madeira1.jpeg');
     background-size: cover;
     background-position: center;
     height: 100vh;
