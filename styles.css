@@ -19,7 +19,7 @@ body, html {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    padding-top: 80px;
+    padding-top: 80px; /* Added to create space below the fixed header */
 }
 
 header {
@@ -86,7 +86,6 @@ nav {
     .hamburger {
         display: flex;
     }
-
     .nav-links {
         display: none;
         flex-direction: column;
@@ -97,19 +96,19 @@ nav {
         background-color: var(--white);
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-
     .nav-links.active {
         display: flex;
     }
-
     .nav-links li {
         margin: 0;
         text-align: center;
     }
-
     .nav-links a {
         display: block;
         padding: 1rem;
+    }
+    .container {
+        padding-top: 70px; /* Adjusted for mobile */
     }
 }
 
@@ -117,11 +116,9 @@ nav {
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.active span:nth-child(2) {
     opacity: 0;
 }
-
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
@@ -211,20 +208,36 @@ footer {
     padding: 2rem 0;
 }
 
-/* Add these new styles for the gallery title */
-.gallery-title {
-    margin-top: 2rem; /* Add some top margin to the gallery title */
-    text-align: center;
-    color: var(--primary-color);
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Adjust mobile styles */
-@media screen and (max-width: 768px) {
-    .container {
-        padding-top: 70px; /* Adjust this value to match your header height on mobile */
-    }
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
 
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.gallery-title {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
     .gallery-title {
-        margin-top: 1rem; /* Reduce top margin on mobile if needed */
+        margin-top: 1rem;
     }
 }
