@@ -19,6 +19,7 @@ body, html {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    padding-top: 80px;
 }
 
 header {
@@ -210,24 +211,20 @@ footer {
     padding: 2rem 0;
 }
 
-.gallery-item {
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+/* Add these new styles for the gallery title */
+.gallery-title {
+    margin-top: 2rem; /* Add some top margin to the gallery title */
+    text-align: center;
+    color: var(--primary-color);
 }
 
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
+/* Adjust mobile styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding-top: 70px; /* Adjust this value to match your header height on mobile */
+    }
 
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.logo a {
-    text-decoration: none;
-    color: inherit;
+    .gallery-title {
+        margin-top: 1rem; /* Reduce top margin on mobile if needed */
+    }
 }
